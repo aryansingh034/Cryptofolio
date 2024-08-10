@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+    cryptofolio:
+        build: .
+        container_name: cryptofolio
+        restart: unless-stopped
+        ports:
+            - 8080:80
+        volumes:
+            - ./data:/var/www/html/api/data
